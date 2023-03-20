@@ -29,11 +29,12 @@ if(!photoData) return <div  />;
 return (
     <>
     <NavBar />
-    <div>
+    <div className="nasa-photo">
         {photoData.media_type === "image" ? (
         <img 
             src={photoData.url}
             alt={photoData.title}
+            className="photo"
         />
         ) : (
             <iframe 
@@ -48,8 +49,8 @@ return (
         )}
         <div>
             <h1>{photoData.title}</h1>
-            <p>{photoData.date}</p>
-            <p>{photoData.explanation}</p>
+            <p className="date">{photoData.date}</p>
+            <p className="explanation">{photoData.explanation}</p>
         
         </div>
     </div>
